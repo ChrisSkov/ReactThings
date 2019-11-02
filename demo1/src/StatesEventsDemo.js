@@ -1,14 +1,19 @@
 import React, { useState } from 'react';
 
 export default function Counter() {
-  // Declare a new state variable, which we'll call "count"
+
   const [count, setCount] = useState(0);
 
   return (
     <div>
-      <p>You clicked {count} times</p>
+      <p>Set initial value: </p> <input type="text" name="startCount"></input>
+      
+      <p>Current count is {count}</p>
       <button onClick={() => setCount(count + 1)}>
-        Click me
+        Increase value
+      </button>
+      <button onClick={() => setCount(count - 1)}>
+        Decrease value
       </button>
     </div>
   );
